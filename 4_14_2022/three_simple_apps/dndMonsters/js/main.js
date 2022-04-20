@@ -27,6 +27,7 @@ function fetchBeast(){
   .then(data => {
     console.log(data)
   })
+  window.open()
 }
 
 function randBeast(){
@@ -39,5 +40,7 @@ function randBeast(){
     let randEncounter = Math.floor(Math.random()*data.count)
     console.log(randEncounter)
     console.log(data.results[randEncounter])
+    console.log(data.results[randEncounter].index)
+    window.open(`https://www.dnd5eapi.co/api/monsters/${data.results[randEncounter].index}`)
   })
 }
