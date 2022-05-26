@@ -1,0 +1,26 @@
+function comp(array1, array2){
+    let answer = true
+    
+    if(array2 != null && array1 != null) {
+      if(array1.length != array2.length) {
+        answer = false
+      }
+    
+      array1.sort((a,b) => a-b)
+      array2.sort((a,b) => a-b)
+    
+      array1.forEach((element,index) => {
+        if(array2.includes(element**2)) {
+          array1[index] = "x"
+          array2[index] = "x"
+        } else {
+          answer = false
+        }
+      })
+      
+    } else {
+      answer = false
+    }
+    
+    return answer
+  }
