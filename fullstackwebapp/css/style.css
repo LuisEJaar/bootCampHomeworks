@@ -2,8 +2,8 @@
 h1{
   color: black;
   display: inline-block;
-  margin: 0 0.5rem;
-  font-size: 3rem;
+  margin: 0 0.25rem;
+  font-size: 4rem;
   text-align: center;
 
   animation: pulse;
@@ -28,8 +28,8 @@ body .top {
   height: 40vh;
 }
 
-.top > * {
-  margin: 1%;
+.top > h1 {
+  margin-bottom: 1.5rem;
 }
 
 .bottom {
@@ -40,13 +40,13 @@ body .top {
 
 .card {
   text-align: center;
-  min-height: 30%;
-  max-width: 80%;
+  min-height: 20%;
+  max-width: 60%;
   border: 1mm solid black;
   border-radius: 12px;
   background-color: aquamarine;
   padding: 2%;
-  margin-top: 4%;
+  margin-top: 1rem;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
 }
 

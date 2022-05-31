@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
 
     case (page == '/api'):
       const arryToJson = [
-            "A cat’s learning style is about the same as a 2- to 3-year-old child.",  
+          "A cat’s learning style is about the same as a 2- to 3-year-old child.",  
           "A cat’s purr vibrates at a frequency of 25 to 150 hertz, which is the same frequency at which muscles and bones repair themselves.",
           "A group of kittens is called a “kindle.”",
           "A house cat could beat superstar runner Usain Bolt in the 200 meter dash.",
@@ -57,9 +57,9 @@ const server = http.createServer((req, res) => {
           "The first known cat video was recorded in 1894.",
           "There are about 88 million pet cats in the United States, which makes them the most popular pet in the country!",
           "Two hundred feral cats prowl the park at Disneyland, doing their part to control rodents — the ones who don’t wear funny outfits and speak in squeaky voices.",
-          "White cats with blue eyes are prone to deafness.",
+          "White cats with blue eyes are prone to deafness."
           ]
-          const catFactResult = Math.ceil(Math.random()*arryToJson.length)
+          const catFactResult = Math.floor(Math.random()*arryToJson.length)
           res.end(JSON.stringify(arryToJson[catFactResult]));
       break
     case (page == '/css/style.css'):
