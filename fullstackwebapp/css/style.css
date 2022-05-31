@@ -54,6 +54,7 @@ body .top {
 #catFact {
   animation: fadeIn;
   animation-duration: 1s;
+  font-size: 2rem;
 }
 
 /* Buttons courtesy of https://getcssscan.com/css-buttons-examples */
