@@ -6,5 +6,5 @@ async function makeReq(){
   const data = await res.json()
 
   console.log(data);
-  document.querySelector("#catFact").textContent = data.name
+  document.querySelector("#catFact").textContent = data
 }
