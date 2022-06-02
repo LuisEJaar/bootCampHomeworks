@@ -4,6 +4,9 @@ console.log("May the Node be with you")
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+app.use(express.static('public'))
+app.use(bodyParser.json())
+
 
 app.listen(3000, function() {
     console.log('listening on 3000')
@@ -27,13 +30,31 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
             res.render('index.ejs', { quotes: results })
           })
           .catch(error => console.error(error))
-      })
+    })
     app.post('/quotes', (req, res) => {
         quotesCollection.insertOne(req.body)
           .then(result => {
             res.redirect('/')
           })
           .catch(error => console.error(error))
-      })
+    })
+    app.put('/quotes', (req, res) => {
+      quotesCollection.findOneAndUpdate(
+        { name: 'Yoda' },
+        {
+          $set: {
+            name: req.body.name,
+            quote: req.body.quote
+          }
+        },
+        {
+          upsert: true
+        }
+      )
+      .then(result => {
+        console.log(result)
+       })
+      .catch(error => console.error(error))
+    })
 })
 .catch(error => console.error(error))
