@@ -2,10 +2,8 @@ function isPangram(string){
     let count = {}
     
     string.toLowerCase().split("").map((letter)=> {
-      if(letter != " " && /^[a-z]+$/.test(letter) && !count[letter]){
+      if(letter != " " && /^[a-z]+$/.test(letter)){
         count[letter] = ""
-      } else if (count[letter]) {
-        return false
       }
     })
     
